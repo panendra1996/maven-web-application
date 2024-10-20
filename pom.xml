@@ -25,11 +25,9 @@
 		<sonar.login>squ_b9c871f98b3f6f15a85b8644daa21bcaf090fe9f</sonar.login>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
 	</properties>
 
 	<dependencies>
-		
 		<dependency>
 			<groupId>org.json</groupId>
 			<artifactId>json</artifactId>
@@ -59,7 +57,6 @@
 		</dependency>
 
 		<!-- compile dependencies -->
-
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
@@ -82,29 +79,53 @@
 		</dependency>
 		
 		<!-- provided dependencies -->
-
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
 			<version>3.1.0</version>
 			<scope>provided</scope>
 		</dependency>
-		
 	</dependencies>
 	
-<distributionManagement>
-    <repository>
-        <id>nexus</id>
-        <name>Mithun Technologies Releases Nexus Repository</name>
-        <url>http://3.111.150.180:8081/repository/canarabank-release/</url>
-    </repository>
-    
-    <snapshotRepository>
-        <id>nexus</id>
-        <name>Mithun Technologies Snapshot Nexus Repository</name>
-        <url>http://3.111.150.180:8081/repository/canarabamk-snapshot/</url>
-    </snapshotRepository>
-</distributionManagement>
+	<repositories>
+		<!-- Snapshot Repository: for development and testing versions (e.g., 1.0.0-SNAPSHOT) -->
+		<repository>
+			<id>canarabamk-snapshot</id>
+			<url>http://3.111.150.180:8081/repository/canarabamk-snapshot/</url>
+			<releases>
+				<enabled>false</enabled> <!-- Disable releases here -->
+			</releases>
+			<snapshots>
+				<enabled>true</enabled> <!-- Enable snapshots -->
+			</snapshots>
+		</repository>
+
+		<!-- Release Repository: for stable, production versions (e.g., 1.0.0) -->
+		<repository>
+			<id>canarabank-release</id>
+			<url>http://3.111.150.180:8081/repository/canarabank-release/</url>
+			<releases>
+				<enabled>true</enabled> <!-- Enable releases -->
+			</releases>
+			<snapshots>
+				<enabled>false</enabled> <!-- Disable snapshots -->
+			</snapshots>
+		</repository>
+	</repositories>
+
+	<distributionManagement>
+		<repository>
+			<id>nexus</id>
+			<name>Mithun Technologies Releases Nexus Repository</name>
+			<url>http://3.111.150.180:8081/repository/canarabank-release/</url>
+		</repository>
+		
+		<snapshotRepository>
+			<id>nexus</id>
+			<name>Mithun Technologies Snapshot Nexus Repository</name>
+			<url>http://3.111.150.180:8081/repository/canarabamk-snapshot/</url>
+		</snapshotRepository>
+	</distributionManagement>
 	
 	<build>
 		<finalName>maven-web-application</finalName>
@@ -143,9 +164,6 @@
 					<wtpContextName>maven-web-application</wtpContextName>
 				</configuration>
 			</plugin>
-			
-</plugins>
+		</plugins>
 	</build>
-	
-	
 </project>
