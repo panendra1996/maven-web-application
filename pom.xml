@@ -93,20 +93,19 @@
 	</dependencies>
 	
 	<distributionManagement>
-	
-	    <repository>
-	      <id>nexus</id>
-	      <name>Mithun Technologies Releases Nexus Repository</name>
-	      <url>http://13.233.141.197:8081/repository/canarabank-release/</url>
-	    </repository>
-	    
-	    <snapshotRepository>
-	      <id>nexus</id>
-	      <name>Mithun Technologies Snapshot Nexus Repository </name>
-              <url>http://13.233.141.197:8081/repository/canarabamk-snapshot/</url>
-	    </snapshotRepository>
-	    
-	</distributionManagement>
+    <repository>
+        <id>nexus-release</id>
+        <name>Mithun Technologies Releases Nexus Repository</name>
+        <url>http://13.233.141.197:8081/repository/canarabank-release/</url>
+    </repository>
+    
+    <snapshotRepository>
+        <id>nexus-snapshot</id>
+        <name>Mithun Technologies Snapshot Nexus Repository</name>
+        <url>http://13.233.141.197:8081/repository/canarabank-snapshot/</url>
+    </snapshotRepository>
+</distributionManagement>
+
 	
 	<build>
 		<finalName>maven-web-application</finalName>
