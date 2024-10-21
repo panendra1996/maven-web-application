@@ -21,7 +21,7 @@
 		<spring.version>5.1.2.RELEASE</spring.version>
 		<junit.version>4.11</junit.version>
 		<log4j.version>1.2.17</log4j.version>
-		<sonar.host.url>http://65.2.171.45:9000/</sonar.host.url>
+		<sonar.host.url>http://65.2.38.99:9000/</sonar.host.url>
 		<sonar.login>squ_b9c871f98b3f6f15a85b8644daa21bcaf090fe9f</sonar.login>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -91,7 +91,7 @@
 		<!-- Snapshot Repository: for development and testing versions (e.g., 1.0.0-SNAPSHOT) -->
 		<repository>
 			<id>canarabamk-snapshot</id>
-			<url>http://3.111.150.180:8081/repository/canarabamk-snapshot/</url>
+			<url>http://13.233.214.162:8081/repository/canarabamk-snapshot/</url>
 			<releases>
 				<enabled>false</enabled> <!-- Disable releases here -->
 			</releases>
@@ -103,7 +103,7 @@
 		<!-- Release Repository: for stable, production versions (e.g., 1.0.0) -->
 		<repository>
 			<id>canarabank-release</id>
-			<url>http://3.111.150.180:8081/repository/canarabank-release/</url>
+			<url>http://13.233.214.162:8081/repository/canarabank-release/</url>
 			<releases>
 				<enabled>true</enabled> <!-- Enable releases -->
 			</releases>
